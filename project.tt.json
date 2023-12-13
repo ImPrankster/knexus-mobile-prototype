@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "knexus-mobile-nutui",
+  "description": "Knexus mobile",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js,tsx,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "var(--nutui-color-primary)",
+        background: "var(--nutui-gray-2)",
+      },
+    },
   },
   plugins: [],
 };

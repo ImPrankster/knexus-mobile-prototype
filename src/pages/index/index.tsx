@@ -1,18 +1,23 @@
-import React from "react";
-import { View } from "@tarojs/components";
+import { Text, View } from "@tarojs/components";
 import { Button } from "@nutui/nutui-react-taro";
-import "./index.scss";
+import MainLayout from "~/components/layouts/main";
+import ImageDisplay from "~/components/imgGen/imageDisplay";
+import ModePicker from "~/components/imgGen/modePicker";
 
 function Index() {
   return (
-    <View className="nutui-react-demo">
-      <View className="index">欢迎使用 NutUI React 开发 Taro 多端项目。</View>
-      <View className="index">
-        <Button type="primary" className="btn">
-          NutUI React Button
-        </Button>
+    <MainLayout>
+      <View className="flex flex-col items-stretch gap-2 p-2">
+        <Text className="mr-4 text-right text-sm">History</Text>
+        <View className="flex flex-col items-stretch gap-2">
+          <ImageDisplay />
+          <ModePicker />
+          <Button type="primary" size="large" className="w-full">
+            Generate
+          </Button>
+        </View>
       </View>
-    </View>
+    </MainLayout>
   );
 }
 

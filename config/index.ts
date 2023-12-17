@@ -53,6 +53,14 @@ const config = {
     publicPath: "/",
     staticDirectory: "static",
     // esnextModules: ['nutui-react'],
+    router: {
+      mode: "browser", // 或者是 'hash'
+      customRoutes: {
+        // "页面路径": "自定义路由"
+        "/pages/index/index": "/",
+        "/pages/landing/index": "/welcome",
+      },
+    },
     postcss: {
       pxtransform: {
         enable: true,

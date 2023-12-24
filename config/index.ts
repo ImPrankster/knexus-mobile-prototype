@@ -3,7 +3,6 @@ const path = require("path");
 const config = {
   projectName: "knexus-mobile-nutui",
   date: "2023-12-13",
-  designWidth: 375,
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
@@ -13,6 +12,14 @@ const config = {
   sourceRoot: "src",
   outputRoot: "dist",
   plugins: ["@tarojs/plugin-html"],
+  designWidth(input) {
+    // 配置 NutUI 375 尺寸
+    if (input?.file?.replace(/\\+/g, "/").indexOf("@nutui") > -1) {
+      return 375;
+    }
+    // 全局使用 Taro 默认的 750 尺寸
+    return 750;
+  },
   defineConstants: {},
   copy: {
     patterns: [],

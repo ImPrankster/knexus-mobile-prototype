@@ -16,7 +16,7 @@ const modes = [
 
 const ModePicker = () => {
   return (
-    <View className="overflow-x-auto">
+    <View className="no-scrollbar overflow-x-auto">
       <View className="flex w-full gap-2">
         {modes.map((mode, i) => (
           <View

@@ -23,7 +23,7 @@ const SettingsPanel = () => {
     setSetting: state.setSetting,
   }));
   return (
-    <View className="fixed bottom-12 flex w-full flex-col gap-2 rounded-t-lg bg-white p-4 shadow-xl">
+    <View className="fixed bottom-12 flex w-full flex-col gap-2 rounded-t-lg bg-white p-4 pb-2 shadow-xl">
       <View className="flex rounded-md border-4 border-black">
         <Input
           placeholder=""
